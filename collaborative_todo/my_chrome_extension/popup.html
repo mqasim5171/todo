@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>To-Do List</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    .task {
+      display: flex;
+      justify-content: space-between;
+      margin: 5px 0;
+    }
+    .task.completed {
+      text-decoration: line-through;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <h3>To-Do List</h3>
+  <div id="task-list">
+    <!-- Tasks will be injected here by popup.js -->
+  </div>
+  <input type="text" id="new-task" placeholder="Add a new task" />
+  <button id="add-task">Add</button>
+
+  <!-- CSRF Token -->
+  <input type="hidden" id="csrf_token" value="{{ csrf_token }}">
+
+  <script src="popup.js"></script>
+</body>
+</html>
